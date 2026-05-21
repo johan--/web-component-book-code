@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "target": "ES2020",
