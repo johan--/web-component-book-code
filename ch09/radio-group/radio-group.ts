@@ -63,19 +63,11 @@ class RadioGroup extends Wrec {
   makeButtons() {
     this.#fixValue();
     const labelArray = this.labels.split(",");
-    const valueArray = this.values
-      .split(",")
-      .map((value: string) => value.trim());
+    const valueArray = this.values.split(",").map((value: string) => value.trim());
     return valueArray.map(
       (value: string, index: number) => html`
         <div>
-          <input
-            checked="this.value"
-            id=${value}
-            name=${this.name}
-            type="radio"
-            value=${value}
-          />
+          <input checked="this.value" id=${value} name=${this.name} type="radio" value=${value} />
           <label for=${value}>${labelArray[index]}</label>
         </div>
       `,
