@@ -1,18 +1,18 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, viewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import './hello-world.js';
-import './radio-group.js';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, viewChild } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import "./hello-world.js";
+import "./radio-group.js";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  templateUrl: "./app.html",
+  styleUrl: "./app.css",
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class App {
-  readonly initialColor = 'red';
-  private helloWorldRef = viewChild<ElementRef>('helloWorldTag');
+  readonly initialColor = "red";
+  private helloWorldRef = viewChild<ElementRef>("helloWorldTag");
 
   ngAfterViewInit(): void {
     this.updateColor(this.initialColor);
