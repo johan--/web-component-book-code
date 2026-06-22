@@ -31,6 +31,6 @@
     labels="Red,Green,Blue"
     value={initialColor}
     values="red,green,blue"
-    on:change={handleChange}
+    onchange={handleChange}
   ></radio-group>
 </main>
