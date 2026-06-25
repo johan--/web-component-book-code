@@ -19,6 +19,8 @@ export class HelloWorld extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    this.#span = this.shadowRoot?.querySelector("span")!;
   }
 
   attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
@@ -26,8 +28,6 @@ export class HelloWorld extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot?.appendChild(template.content.cloneNode(true));
-    this.#span = this.shadowRoot?.querySelector("span")!;
     this.name = this.getAttribute("name") || this.#name;
   }
 
